@@ -57,6 +57,18 @@ struct ContentView: View {
                 .foregroundStyle(Color.gray)
                 .font(.subheadline)
             
+            //start time stamp
+            Text("0:00")
+                .offset(x:-160,y:212)
+                .foregroundStyle(Color.gray)
+                .font(.caption)
+            
+            //end time stamp
+            Text("-2:36")
+                .offset(x:160,y:210)
+                .foregroundStyle(Color.gray)
+                .font(.caption)
+            
             //three dots
             Text(". . . ")
                 .offset(x:160,y:-375)
@@ -101,8 +113,9 @@ struct ContentView: View {
             }
 
             //slider
-            Slider(value: $time, in: 0...236).offset(y:190)
+            Slider(value: $time, in: 0...236).offset(y:220)
                 .accentColor(.white)
+                .scaleEffect(0.87)
             
             //saved green check
             Image(systemName: "checkmark.circle.fill")
@@ -170,7 +183,7 @@ struct ContentView: View {
 
     }
 }
-// I finished!!
+// All done!!
 #Preview {
     ContentView()
 }
